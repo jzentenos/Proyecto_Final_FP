@@ -11,3 +11,6 @@ struct Agenda {
     string horaEntrada; 
     string horaSalida;  
 };
+
+void agregarAgenda(Agenda agendas[], int& contador, const string& fecha, const string& horaEntrada, const string& horaSalida);
+
