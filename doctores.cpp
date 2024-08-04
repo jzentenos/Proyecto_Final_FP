@@ -2,7 +2,7 @@
 #include "doctores.h"
 #include<string>
 using namespace std;
-INFORMACION doc_nuevos(){
+int doc_nuevos(INFORMACION doctores[]){
 	INFORMACION info[1000];
 	int n;
 	cout<<"Cantidad de doctores: "; cin>>n;
@@ -19,4 +19,5 @@ INFORMACION doc_nuevos(){
 		cin.ignore();
 		cout<<"\nEmail: "; getline(cin, info[i].nombres);
 	}
+	return n;
 }
