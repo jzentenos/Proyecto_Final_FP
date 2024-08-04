@@ -1,0 +1,53 @@
+#include<iostream>
+#include "doctores.h"
+#include<string>
+#include "validacion.h"
+using namespace std;
+int doc_nuevos(INFORMACION doctores[]){
+	INFORMACION info[1000];
+	int n;
+	cout<<"Cantidad de doctores: "; cin>>n;
+	for(int i=0; i<n; i++){
+		cin.ignore();
+		cout<<"\nNombres: "; getline(cin, info[i].nombres);
+		cout<<"\nApellidos: "; getline(cin, info[i].apellidos);
+		cout<<"\nNumero de celular: "; cin>>info[i].telefono;
+		//Validacion del numero de celular del doctor
+		int lon2=strlen(info[i].telefono);
+		while(!val_num(info[i].telefono, lon2)){
+			cout<<"Numero de celular incorrecto. Ingrese nuevamente: ";
+			cin>>info[i].telefono;
+			lon2=strlen(info[i].telefono);
+		}
+		cin.ignore();
+		cout<<"\nEspecialidad: "; getline(cin, info[i].especialidad);
+		cout<<"\nEstado civil: "; getline(cin, info[i].estado_civil);
+		cout<<"\nNacionalidad: "; getline(cin, info[i].pais);
+		cout<<"\nDNI: "; cin>>info[i].DNI;
+		//Validacion del DNI del doctor
+		int lon3=strlen(info[i].DNI);
+		while(!val_num(info[i].DNI, lon3) || lon3!=8){
+			cout<<"Numero de celular incorrecto. Ingrese nuevamente: ";
+			cin>>info[i].DNI;
+			lon3=strlen(info[i].DNI);
+		}
+		cin.ignore();
+		cout<<"\nEmail: "; getline(cin, info[i].nombres);
+	}
+	return n;
+}
+void doc_mostrar(INFORMACION doctores[],int contador){
+	for(int i=0; i<contador; i++){
+        cout<<"Doctor #"<<(i + 1)<<":"<<endl;
+        cout<<"Nombres: "<<doctores[i].nombres<<endl;
+        cout<<"Apellidos: "<<doctores[i].apellidos<<endl;
+        cout<<"Numero de celular: "<< doctores[i].telefono<<endl;
+        cout<<"Especialidad: "<<doctores[i].especialidad<<endl;
+        cout<<"Estado civil: "<<doctores[i].estado_civil<<endl;
+        cout<<"Nacionalidad: "<<doctores[i].pais<<endl;
+        cout<<"DNI: "<<doctores[i].DNI<<endl;
+        cout<<"Email: "<<doctores[i].email<<endl;
+        cout<<"--------------------------"<<endl;
+	}
+	
+}
