@@ -32,4 +32,15 @@ void mostrarAgendas(const Agenda agendas[], int contador) {
     }
 }
 
+int main() {
+    
+    Agenda agendas[MAX_AGENDAS];
+    int contador = 0;
+    string fechaDisponible, horaEntrada, horaSalida;
+    char continuar;
+    
+    return 0;
+}
+
+
 
