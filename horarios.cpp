@@ -11,7 +11,14 @@ struct Agenda {
 };
 
 void agregarAgenda(Agenda agendas[], int& contador, const string& fecha, const string& horaEntrada, const string& horaSalida) {
-   
+   if (contador < MAX_AGENDAS) {
+        agendas[contador].fecha = fecha;
+        agendas[contador].horaEntrada = horaEntrada;
+        agendas[contador].horaSalida = horaSalida;
+        contador++;
+    } else {
+        cout << "No se pueden agregar más agendas. Límite alcanzado." << endl;
+    }
 }
 
 
