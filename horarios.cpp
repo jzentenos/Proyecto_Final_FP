@@ -38,6 +38,21 @@ int main() {
     int contador = 0;
     string fechaDisponible, horaEntrada, horaSalida;
     char continuar;
+    do {
+        cout << "Ingrese la fecha disponible del doctor (AAAA-MM-DD): ";
+        getline(cin, fechaDisponible);
+        cout << "Ingrese la hora de entrada del doctor (HH:MM): ";
+        getline(cin, horaEntrada);
+        cout << "Ingrese la hora de salida del doctor (HH:MM): ";
+        getline(cin, horaSalida);
+
+        agregarAgenda(agendas, contador, fechaDisponible, horaEntrada, horaSalida);
+
+        cout << "¿Desea agregar otra agenda? (s/n): ";cin >> continuar;
+        cin.ignore(); 
+    } while (continuar == 's' || continuar == 'S');
+
+    mostrarAgendas(agendas, contador);
     
     return 0;
 }
