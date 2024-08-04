@@ -1,6 +1,7 @@
 #ifndef DATOS_H
 #define DATOS_H
 #include<string>
+using namespace std;
 struct DOMICILIO{
 	string calle;
 	char numero[100];
@@ -21,5 +22,5 @@ struct DATOS{
 	char telefono[100];
 };
 int leer_datos(DATOS datos[]);
-void mostrar_datos(DATOS datos[], n);
+void mostrar_datos(DATOS datos[], int n);
 #endif
