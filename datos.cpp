@@ -20,13 +20,20 @@ int leer_datos(DATOS datos[]){
         }
 		cin.ignore();
 		cout<<"\nNumero de celular: "; cin>>datos[i].telefono;
+		//validacion de el numero de celular del usuario
+		int lon2=strlen(datos[i].telefono);
+		while(!val_num(datos[i].telefono, lon2)){
+			cout<<"Numero de celular incorrecto. Ingrese nuevamente: ";
+			cin>>datos[i].telefono;
+			lon2=strlen(datos[i].telefono);
+		}
 		cin.ignore();
 		cout<<"\nFecha de nacimiento dd/mm/aaaa: "; 
 		cin>>datos[i].nacimiento.dia>>datos[i].nacimiento.mes>>datos[i].nacimiento.periodo;
 		cin.ignore();
 		cout<<"\nDireccion";
 		cout<<"\nCalle: "; getline(cin, datos[i].direccion.calle);
-		cout<<"\nNumero de casa: "; cin>>datos[i].direccion.numero;
+		cout<<"\nNumero de casa o Mz. y Lt. : "; cin>>datos[i].direccion.numero;
 		cin.ignore();
 		cout<<"\nCodigo postal: "; cin>>datos[i].direccion.cod_postal;
 		cin.ignore();
