@@ -12,6 +12,6 @@ struct INFORMACION{
 	char DNI[100];
 	string email;
 };
-INFORMACION doc_nuevos();
-INFORMACION doc_mostrar();
+int doc_nuevos(INFORMACION);
+doc_mostrar(INFORMACION);
 #endif
