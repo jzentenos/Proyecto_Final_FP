@@ -1,6 +1,7 @@
 #ifndef DOCTORES_H
 #define DOCTORES_H
 #include<string>
+using namespace std;
 struct INFORMACION{
 	string nombres;
 	string apellidos;
