@@ -1,5 +1,6 @@
 #include<iostream>
 #include "datos.h"
+#include "validacion.h"
 #include<string>
 using namespace std;
 int leer_datos(DATOS datos[]){
@@ -10,6 +11,13 @@ int leer_datos(DATOS datos[]){
 		cout<<"\nNombres: "; getline(cin,datos[i].nombre);
 		cout<<"\nApellidos: "; getline(cin, datos[i].apellido); 
 		cout<<"\nDNI: "; cin>>datos[i].DNI;
+		//Validacion de el ingreso de numeros del DNI
+		int lon=strlen(datos[i].DNI);
+		while(!val_num(datos[i].DNI, lon) || lon!= 8) {
+            cout<<"DNI incorrecto. Ingrese nuevamente: ";
+            cin>>datos[i].DNI;
+            lon=strlen(datos[i].DNI);
+        }
 		cin.ignore();
 		cout<<"\nNumero de celular: "; cin>>datos[i].telefono;
 		cin.ignore();
