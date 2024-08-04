@@ -30,7 +30,6 @@ SupportXPThemes=0
 CompilerSet=0
 CompilerSettings=0000000000000000000000000
 UnitCount=5
-
 [VersionInfo]
 Major=1
 Minor=0
@@ -49,7 +48,6 @@ ProductName=
 ProductVersion=
 AutoIncBuildNr=0
 SyncProduct=1
-
 [Unit1]
 FileName=main.cpp
 CompileCpp=1
@@ -99,4 +97,3 @@ Link=1
 Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
-
