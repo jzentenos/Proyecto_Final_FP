@@ -21,3 +21,18 @@ int doc_nuevos(INFORMACION doctores[]){
 	}
 	return n;
 }
+void doc_mostrar(INFORMACION doctores[],int contador){
+	for(int i=0; i<contador; i++){
+        cout<<"Doctor #"<<(i + 1)<<":"<<endl;
+        cout<<"Nombres: "<<doctores[i].nombres<<endl;
+        cout<<"Apellidos: "<<doctores[i].apellidos<<endl;
+        cout<<"Numero de celular: "<< doctores[i].telefono<<endl;
+        cout<<"Especialidad: "<<doctores[i].especialidad<<endl;
+        cout<<"Estado civil: "<<doctores[i].estado_civil<<endl;
+        cout<<"Nacionalidad: "<<doctores[i].pais<<endl;
+        cout<<"DNI: "<<doctores[i].DNI<<endl;
+        cout<<"Email: "<<doctores[i].email<<endl;
+        cout<<"--------------------------"<<endl;
+	}
+	
+}
