@@ -24,6 +24,13 @@ int doc_nuevos(INFORMACION doctores[]){
 		cout<<"\nEstado civil: "; getline(cin, info[i].estado_civil);
 		cout<<"\nNacionalidad: "; getline(cin, info[i].pais);
 		cout<<"\nDNI: "; cin>>info[i].DNI;
+		//Validacion del DNI del doctor
+		int lon3=strlen(info[i].DNI);
+		while(!val_num(info[i].DNI, lon3) || lon3!=8){
+			cout<<"Numero de celular incorrecto. Ingrese nuevamente: ";
+			cin>>info[i].DNI;
+			lon3=strlen(info[i].DNI);
+		}
 		cin.ignore();
 		cout<<"\nEmail: "; getline(cin, info[i].nombres);
 	}
