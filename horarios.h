@@ -15,3 +15,5 @@ struct Agenda {
 void agregarAgenda(Agenda agendas[], int& contador, const string& fecha, const string& horaEntrada, const string& horaSalida);
 
 void mostrarAgendas(const Agenda agendas[], int contador);
+
+#endif
