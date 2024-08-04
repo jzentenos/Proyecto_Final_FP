@@ -22,7 +22,9 @@ void agregarAgenda(Agenda agendas[], int& contador, const string& fecha, const s
 }
 
 void mostrarAgendas(const Agenda agendas[], int contador) {
-    
+    cout << "Fecha        | Hora Entrada | Hora Salida" << endl;
+    cout << "------------------------------------------" << endl;
+
 }
 
 
