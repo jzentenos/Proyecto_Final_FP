@@ -8,6 +8,8 @@ struct INFORMACION{
 	string especialidad;
 	string estado_civil;
 	string pais;
+	char DNI[100];
+	string email;
 };
 INFORMACION doc_nuevos();
 INFORMACION doc_mostrar();
