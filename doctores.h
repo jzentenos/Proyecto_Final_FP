@@ -9,4 +9,6 @@ struct INFORMACION{
 	string estado_civil;
 	string pais;
 };
+INFORMACION doc_nuevos();
+INFORMACION doc_mostrar();
 #endif
