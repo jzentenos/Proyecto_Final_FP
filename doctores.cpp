@@ -1,6 +1,7 @@
 #include<iostream>
 #include "doctores.h"
 #include<string>
+#include "validacion.h"
 using namespace std;
 int doc_nuevos(INFORMACION doctores[]){
 	INFORMACION info[1000];
@@ -11,6 +12,13 @@ int doc_nuevos(INFORMACION doctores[]){
 		cout<<"\nNombres: "; getline(cin, info[i].nombres);
 		cout<<"\nApellidos: "; getline(cin, info[i].apellidos);
 		cout<<"\nNumero de celular: "; cin>>info[i].telefono;
+		//Validacion del numero de celular del doctor
+		int lon2=strlen(info[i].telefono);
+		while(!val_num(info[i].telefono, lon2)){
+			cout<<"Numero de celular incorrecto. Ingrese nuevamente: ";
+			cin>>info[i].telefono;
+			lon2=strlen(info[i].telefono);
+		}
 		cin.ignore();
 		cout<<"\nEspecialidad: "; getline(cin, info[i].especialidad);
 		cout<<"\nEstado civil: "; getline(cin, info[i].estado_civil);
