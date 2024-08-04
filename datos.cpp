@@ -36,6 +36,13 @@ int leer_datos(DATOS datos[]){
 		cout<<"\nNumero de casa o Mz. y Lt. : "; cin>>datos[i].direccion.numero;
 		cin.ignore();
 		cout<<"\nCodigo postal: "; cin>>datos[i].direccion.cod_postal;
+		//Validacion del codigo postal del paciente
+		int lon3=strlen(datos[i].direccion.cod_postal);
+		while(!val_num(datos[i].direccion.cod_postal, lon3)){
+			cout<<"Codidgo postal incorrecto. Ingrese nuevamente: ";
+			cin>>datos[i].direccion.cod_postal;
+			lon2=strlen(datos[i].direccion.cod_postal);
+		}
 		cin.ignore();
 		cout<<"\nReferencia: "; getline(cin, datos[i].direccion.referencia);
 	}
