@@ -12,7 +12,7 @@ int main (){
 		cout<<"--------------------"<<endl;
 		cout<<"1. Sub-menu PACIENTE"<<endl;
 		cout<<"2. Sub-menu DOCTOR"<<endl;
-		cout<<"3. Agendar cita"<<endl;
+		cout<<"3. Sub-menu CITAS"<<endl;
 		cout<<"0. Salir"<<endl;
 		cout<<"Ingrese opcion: "; cin>> n;
 		
@@ -21,10 +21,10 @@ int main (){
 				Paciente ();
 				break;
 			case 2:
-				cout<<"\nAhora esta en Sub-menu DOCTORES.";
+				cout<<"Ahora esta en Sub-menu DOCTOR";
 				break;
 			case 3:
-				cout<<"\nAhora esta en Agendar cita.";
+				cout<<"Ahora esta en Sub-menu CITAS";
 				break;
 			case 0:
 				cout<<"\nSaliendo...";
@@ -46,7 +46,7 @@ void Paciente (){
 		cout<<"\n--------------------"<<endl;
 		cout<<"Sub-menu PACIENTE"<<endl;
 		cout<<"--------------------"<<endl;
-		cout<<"1. Agregar Paciente"<<endl;
+		cout<<"1. Agregar paciente"<<endl;
 		cout<<"2. Lista de pacientes registrados"<<endl;
 		cout<<"0. Regresar al Menu Principal -> "<<endl;
 		cout<<"Ingrese opcion: "; cin>> a;
@@ -60,6 +60,7 @@ void Paciente (){
 				break;
 			case 0:
 				cout<<"Regresando al Menu Principal...";
+				system("pause");
 				break;
 			default:
 				cout<<"Opcion invalida, intentelo de nuevo"<<endl;
