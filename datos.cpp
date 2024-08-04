@@ -24,6 +24,7 @@ int leer_datos(DATOS datos[]){
 		cin.ignore();
 		cout<<"\nReferencia: "; getline(cin, datos[i].direccion.referencia);
 	}
+	return a;
 }
 void mostrar_datos(DATOS datos[], int n){
 	for(int i=0; i<n; i++){
