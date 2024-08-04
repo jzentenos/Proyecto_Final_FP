@@ -20,4 +20,6 @@ struct DATOS{
 	FECHA nacimiento;
 	char telefono[100];
 };
+int leer_datos(DATOS datos[]);
+void mostrar_datos(DATOS datos[], n);
 #endif
