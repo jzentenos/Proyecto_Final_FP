@@ -26,6 +26,19 @@ int leer_datos(DATOS datos[]){
 	}
 }
 void mostrar_datos(DATOS datos[], int n){
-	
+	for(int i=0; i<n; i++){
+		cout<<"\nPaciente #"<<(i + 1)<<":"<< endl;
+        cout<<"Nombres: "<<datos[i].nombre<< endl;
+        cout<<"Apellidos: "<<datos[i].apellido<< endl;
+        cout<<"DNI: "<<datos[i].DNI<<endl;
+        cout<<"Numero de celular: "<<datos[i].telefono<<endl;
+        cout<<"Fecha de nacimiento: "<< datos[i].nacimiento.dia<<"/"<<datos[i].nacimiento.mes<<"/"<<datos[i].nacimiento.periodo<<endl;
+        cout<<"Direccion:"<<endl;
+        cout<<"Calle: "<<datos[i].direccion.calle<< endl;
+        cout<<"Numero de casa: "<<datos[i].direccion.numero<<endl;
+        cout<<"Codigo postal: "<<datos[i].direccion.cod_postal<<endl;
+        cout<<"Referencia: "<<datos[i].direccion.referencia<<endl;
+        cout<<"--------------------------"<<endl;
+	}
 	
 }
