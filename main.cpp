@@ -14,6 +14,7 @@ void Cita ();
 int main (){
 	int n;
 	do {
+		system("cls");
 		cout<<"\n--------------------"<<endl;
 		cout<<"   MENU PRINCIPAL"<<endl;
 		cout<<"--------------------"<<endl;
@@ -55,6 +56,7 @@ int numDatos=0;
 void Paciente (){
 	int a;
 	do {
+		//system("cls");
 		cout<<"\n--------------------"<<endl;
 		cout<<"Sub-menu PACIENTE"<<endl;
 		cout<<"--------------------"<<endl;
@@ -65,18 +67,25 @@ void Paciente (){
 		
 		switch (a){
 			case 1:
+				system("cls");
+				cout<<"\n--------------------"<<endl;
+				cout<<"Sub-menu PACIENTE"<<endl;
+				cout<<"--------------------"<<endl;
 				numDatos = leer_datos(datos);
 			break;
 			case 2:
 				if(numDatos == 0){
-					cout<<"\nAun no se registraron pacientes.";
+					cout<<"\nAun no se registraron pacientes."<<endl;
+					system("pause");
 				}
 				else {
+					//system("cls");
+					cout<<"\n\tListado de pacientes registrados: "<<endl;
 					mostrar_datos(datos,numDatos);
 				}
 			break;
 			case 0:
-				cout<<"Regresando al Menu Principal...";
+				cout<<"\nRegresando al Menu Principal..."<<endl;
 				system("pause");
 			break;
 			default:
@@ -95,6 +104,7 @@ int numDoctores = 0;
 void Doctor (){
 	int b;
 	do {
+		system("cls");
 		cout<<"\n--------------------"<<endl;
 		cout<<"Sub-menu DOCTOR"<<endl;
 		cout<<"--------------------"<<endl;
@@ -105,18 +115,25 @@ void Doctor (){
 		
 		switch (b){
 			case 1:
+				system("cls");
+				cout<<"\n--------------------"<<endl;
+				cout<<"Sub-menu DOCTOR"<<endl;
+				cout<<"--------------------"<<endl;
 				numDoctores = doc_nuevos(doctores);
 			break;
 			case 2:
 				if(numDoctores == 0){
-					cout<<"\nAun no se registraron doctores.";
+					cout<<"\nAun no se registraron doctores."<<endl;
+					system("pause");
 				}
 				else {
+					//system("cls");
+					cout<<"\n\tListado de doctores registrados: "<<endl;
 					doc_mostrar(doctores,numDoctores);
 				}
 			break;
 			case 0:
-				cout<<"Regresando al Menu Principal...";
+				cout<<"\nRegresando al Menu Principal..."<<endl;
 				system("pause");
 			break;
 			default:
