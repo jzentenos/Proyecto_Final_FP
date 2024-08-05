@@ -1,5 +1,10 @@
 //Menu Principal
 #include <iostream>
+#include <string>
+#include "doctores.h"
+#include "validacion.h"
+#include "datos.h"
+
 using namespace std;
 
 void Paciente ();
