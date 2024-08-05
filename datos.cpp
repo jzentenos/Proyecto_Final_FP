@@ -8,6 +8,8 @@ int leer_datos(DATOS datos[]){
 	cout<<"Ingrese la cantidad de pacientes a registrar: "; cin>>a;
 	for(int i=0; i<a; i++){
 		cin.ignore();
+		cout<<"--------------------------"<<endl;
+		cout<<"Paciente #"<<i+1<<endl;
 		cout<<"\nNombres: "; getline(cin,datos[i].nombre);
 		cout<<"\nApellidos: "; getline(cin, datos[i].apellido); 
 		cout<<"\nDNI: "; cin>>datos[i].DNI;
