@@ -68,7 +68,7 @@ void Paciente (){
 				numDatos = leer_datos(datos);
 			break;
 			case 2:
-				if(numDatos = 0){
+				if(numDatos == 0){
 					cout<<"\nAun no se registraron pacientes.";
 				}
 				else {
@@ -108,7 +108,7 @@ void Doctor (){
 				numDoctores = doc_nuevos(doctores);
 			break;
 			case 2:
-				if(numDoctores = 0){
+				if(numDoctores == 0){
 					cout<<"\nAun no se registraron doctores.";
 				}
 				else {
