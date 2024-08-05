@@ -50,7 +50,7 @@ int main (){
 //Arreglo global datos
 //Variable global numDatos que contiene el numero de pacientes
 DATOS datos[1000];
-int numDatos;
+int numDatos=0;
 
 void Paciente (){
 	int a;
