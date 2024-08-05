@@ -77,6 +77,11 @@ void Paciente (){
 	} while (a!=0);
 }
 
+//Arreglo global doctores
+//Variable global numDoctores que contiene el numero de doctores
+INFORMACION doctores[1000];
+int numDoctores = 0;
+
 void Doctor (){
 	int b;
 	do {
@@ -90,10 +95,15 @@ void Doctor (){
 		
 		switch (b){
 			case 1:
-				cout<<"Ahora esta en Agregar doctor";
+				numDoctores = doc_nuevos(doctores);
 			break;
 			case 2:
-				cout<<"Ahora esta en Lista de doctores registrados";
+				if(numDoctores = 0){
+					cout<<"\nAun no se registraron doctores.";
+				}
+				else {
+					doc_mostrar(doctores,numDoctores);
+				}
 			break;
 			case 0:
 				cout<<"Regresando al Menu Principal...";
