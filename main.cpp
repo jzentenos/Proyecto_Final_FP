@@ -4,6 +4,7 @@
 #include "doctores.h"
 #include "validacion.h"
 #include "datos.h"
+#include "horarios.h"
 
 using namespace std;
 
@@ -143,7 +144,12 @@ void Doctor (){
 		}
 	} while (b!=0);
 }
-	
+
+//Arreglo global agendas
+//Variable global numCitas que contiene el numero de citas
+Agenda agendas[MAX_AGENDAS];
+int numCitas = 0;
+
 void Cita (){
 	int c;
 	do {
@@ -154,22 +160,35 @@ void Cita (){
 		cout<<"2. Lista de citas registradas"<<endl;
 		cout<<"0. Regresar al Menu Principal -> "<<endl;
 		cout<<"Ingrese opcion: "; cin>> c;
+        cin.ignore(); // Limpiar el buffer de entrada
 		
-		switch (c){
-			case 1:
-				cout<<"Ahora esta en Agendar cita";
-			break;
-			case 2:
-				cout<<"Ahora esta en Lista de citas registradas";
-			break;
-			case 0:
-				cout<<"Regresando al Menu Principal...";
-				system("pause");
-			break;
-			default:
-				cout<<"Opcion invalida, intentelo de nuevo"<<endl;
-				system("pause");
-			break;
-		}
-	} while (c!=0);
+        switch (c) {
+            case 1: {
+                string fecha, horaEntrada, horaSalida;
+                cout << "Ingrese la fecha de la cita (AAAA-MM-DD): ";
+                getline(cin, fecha);
+                cout << "Ingrese la hora de entrada (HH:MM): ";
+                getline(cin, horaEntrada);
+                cout << "Ingrese la hora de salida (HH:MM): ";
+                getline(cin, horaSalida);
+                agregarAgenda(agendas, numCitas, fecha, horaEntrada, horaSalida);
+                break;
+            }
+            case 2:
+                if (numCitas == 0) {
+                    cout << "\nAun no se registraron citas.";
+                } else {
+                    mostrarAgendas(agendas, numCitas);
+                }
+                break;
+            case 0:
+                cout << "Regresando al Menu Principal...";
+                system("pause");
+                break;
+            default:
+                cout << "Opcion invalida, intentelo de nuevo" << endl;
+                system("pause");
+                break;
+        }
+    } while (c != 0);
 }
