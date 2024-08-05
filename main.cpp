@@ -3,6 +3,8 @@
 using namespace std;
 
 void Paciente ();
+void Doctor ();
+void Cita ();
 
 int main (){
 	int n;
@@ -19,20 +21,20 @@ int main (){
 		switch (n){
 			case 1:
 				Paciente ();
-				break;
+			break;
 			case 2:
-				cout<<"Ahora esta en Sub-menu DOCTOR";
-				break;
+				Doctor();
+			break;
 			case 3:
-				cout<<"Ahora esta en Sub-menu CITAS";
-				break;
+				Cita();
+			break;
 			case 0:
 				cout<<"\nSaliendo...";
-				break;
+			break;
 			default:
 				cout<<"\nOpcion invalida, intentelo de nuevo."<<endl;
 				system("pause");
-				break;
+			break;
 		}
 		
 	} while (n!=0);
@@ -54,18 +56,78 @@ void Paciente (){
 		switch (a){
 			case 1:
 				cout<<"Ahora esta en Agregar paciente";
-				break;
+			break;
 			case 2:
 				cout<<"Ahora esta en Lista de pacientes registrados";
-				break;
+			break;
 			case 0:
 				cout<<"Regresando al Menu Principal...";
 				system("pause");
-				break;
+			break;
 			default:
 				cout<<"Opcion invalida, intentelo de nuevo"<<endl;
 				system("pause");
-				break;
+			break;
 		}
 	} while (a!=0);
+}
+
+void Doctor (){
+	int b;
+	do {
+		cout<<"\n--------------------"<<endl;
+		cout<<"Sub-menu DOCTOR"<<endl;
+		cout<<"--------------------"<<endl;
+		cout<<"1. Agregar doctor"<<endl;
+		cout<<"2. Lista de doctores registrados"<<endl;
+		cout<<"0. Regresar al Menu Principal -> "<<endl;
+		cout<<"Ingrese opcion: "; cin>> b;
+		
+		switch (b){
+			case 1:
+				cout<<"Ahora esta en Agregar doctor";
+			break;
+			case 2:
+				cout<<"Ahora esta en Lista de doctores registrados";
+			break;
+			case 0:
+				cout<<"Regresando al Menu Principal...";
+				system("pause");
+			break;
+			default:
+				cout<<"Opcion invalida, intentelo de nuevo"<<endl;
+				system("pause");
+			break;
+		}
+	} while (b!=0);
+}
+	
+void Cita (){
+	int c;
+	do {
+		cout<<"\n--------------------"<<endl;
+		cout<<"Sub-menu CITAS"<<endl;
+		cout<<"--------------------"<<endl;
+		cout<<"1. Agendar cita"<<endl;
+		cout<<"2. Lista de citas registradas"<<endl;
+		cout<<"0. Regresar al Menu Principal -> "<<endl;
+		cout<<"Ingrese opcion: "; cin>> c;
+		
+		switch (c){
+			case 1:
+				cout<<"Ahora esta en Agendar cita";
+			break;
+			case 2:
+				cout<<"Ahora esta en Lista de citas registradas";
+			break;
+			case 0:
+				cout<<"Regresando al Menu Principal...";
+				system("pause");
+			break;
+			default:
+				cout<<"Opcion invalida, intentelo de nuevo"<<endl;
+				system("pause");
+			break;
+		}
+	} while (c!=0);
 }
