@@ -1,14 +1,7 @@
 #include <iostream>
 #include <string>
 #include "doctores.h"
-
-const int MAX_AGENDAS = 100;
-
-struct Agenda {
-    string fecha;      
-    string horaEntrada; 
-    string horaSalida;  
-};
+#include "horarios.h"
 
 void agregarAgenda(Agenda agendas[], int& contador, const string& fecha, const string& horaEntrada, const string& horaSalida) {
    if (contador < MAX_AGENDAS) {
@@ -32,7 +25,7 @@ void mostrarAgendas(const Agenda agendas[], int contador) {
     }
 }
 
-int main() {
+void registro() {
     
     Agenda agendas[MAX_AGENDAS];
     int contador = 0;
@@ -51,10 +44,7 @@ int main() {
         cout << "¿Desea agregar otra agenda? (s/n): ";cin >> continuar;
         cin.ignore(); 
     } while (continuar == 's' || continuar == 'S');
-
     mostrarAgendas(agendas, contador);
-    
-    return 0;
 }
 
 
