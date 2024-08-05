@@ -46,7 +46,12 @@ int main (){
 	
 	return 0;
 }
-	
+
+//Arreglo global datos
+//Variable global numDatos que contiene el numero de pacientes
+DATOS datos[1000];
+int numDatos;
+
 void Paciente (){
 	int a;
 	do {
@@ -60,10 +65,15 @@ void Paciente (){
 		
 		switch (a){
 			case 1:
-				cout<<"Ahora esta en Agregar paciente";
+				numDatos = leer_datos(datos);
 			break;
 			case 2:
-				cout<<"Ahora esta en Lista de pacientes registrados";
+				if(numDatos = 0){
+					cout<<"\nAun no se registraron pacientes.";
+				}
+				else {
+					mostrar_datos(datos,numDatos);
+				}
 			break;
 			case 0:
 				cout<<"Regresando al Menu Principal...";
