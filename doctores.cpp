@@ -8,6 +8,8 @@ int doc_nuevos(INFORMACION doctores[]){
 	cout<<"Cantidad de doctores: "; cin>>n;
 	for(int i=0; i<n; i++){
 		cin.ignore();
+		cout<<"--------------------------"<<endl;
+		cout<<"Doctor #"<<i+1<<endl;
 		cout<<"\nNombres: "; getline(cin, doctores[i].nombres);
 		cout<<"\nApellidos: "; getline(cin, doctores[i].apellidos);
 		cout<<"\nNumero de celular: "; cin>>doctores[i].telefono;
@@ -32,6 +34,7 @@ int doc_nuevos(INFORMACION doctores[]){
 		}
 		cin.ignore();
 		cout<<"\nEmail: "; getline(cin, doctores[i].nombres);
+		cout<<"--------------------------"<<endl;
 	}
 	return n;
 }
