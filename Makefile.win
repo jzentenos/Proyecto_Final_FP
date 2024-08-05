@@ -4,7 +4,6 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-
 OBJ      = main.o doctores.o datos.o validacion.o
 LINKOBJ  = main.o doctores.o datos.o validacion.o
 LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
@@ -27,6 +26,7 @@ $(BIN): $(OBJ)
 
 main.o: main.cpp
 	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
 doctores.o: doctores.cpp
 	$(CPP) -c doctores.cpp -o doctores.o $(CXXFLAGS)
 
