@@ -57,7 +57,6 @@ int numDatos=0;
 void Paciente (){
 	int a;
 	do {
-		//system("cls");
 		cout<<"\n--------------------"<<endl;
 		cout<<"Sub-menu PACIENTE"<<endl;
 		cout<<"--------------------"<<endl;
@@ -80,7 +79,6 @@ void Paciente (){
 					system("pause");
 				}
 				else {
-					//system("cls");
 					cout<<"\n\tListado de pacientes registrados: "<<endl;
 					mostrar_datos(datos,numDatos);
 				}
@@ -105,7 +103,6 @@ int numDoctores = 0;
 void Doctor (){
 	int b;
 	do {
-		system("cls");
 		cout<<"\n--------------------"<<endl;
 		cout<<"Sub-menu DOCTOR"<<endl;
 		cout<<"--------------------"<<endl;
@@ -128,7 +125,6 @@ void Doctor (){
 					system("pause");
 				}
 				else {
-					//system("cls");
 					cout<<"\n\tListado de doctores registrados: "<<endl;
 					doc_mostrar(doctores,numDoctores);
 				}
@@ -160,7 +156,7 @@ void Cita (){
 		cout<<"2. Lista de citas registradas"<<endl;
 		cout<<"0. Regresar al Menu Principal -> "<<endl;
 		cout<<"Ingrese opcion: "; cin>> c;
-        cin.ignore(); // Limpiar el buffer de entrada
+        cin.ignore(); //Limpiar el buffer de entrada
 		
         switch (c) {
             case 1: {
