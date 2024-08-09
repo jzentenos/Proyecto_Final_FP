@@ -33,7 +33,7 @@ int doc_nuevos(INFORMACION doctores[]){
 			lon3=strlen(doctores[i].DNI);
 		}
 		cin.ignore();
-		cout<<"\nEmail: "; getline(cin, doctores[i].nombres);
+		cout<<"\nEmail: "; getline(cin, doctores[i].email);
 		cout<<"--------------------------"<<endl;
 	}
 	return n;
